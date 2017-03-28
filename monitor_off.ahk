@@ -1,8 +1,6 @@
 #SingleInstance force
 
 
- 
-
 
 ;^b::
 

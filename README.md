@@ -8,9 +8,13 @@ So why this script is different?
 
 When you press  press control + b to turn of the monitors following happen
 1) it set the brighness to minimum. This ensure when unwanted monitor turn on happen. it wont disturb you at dim room at night.
+
 2) It set the monitor sleep duration to 1 minute. This ensure monitor can go off as soon as it become on for any resoan
+
 3) It deactivate keybaord and mouse! This ensure monitor wont turn on by unwanted mouse movment or pressing unwanted key on keyboard!
-4) it lock computer screen
+
+4) it lock computer screen <br>
+
 5) Finally it off the monitor
 
 Note. You need press control+Alt+Enter to activate keybaord and mmouse and login at your device. After login, the screen is dim and monitor sleep duration 
