@@ -1,4 +1,16 @@
-^b::
+#SingleInstance force
+
+
+ 
+
+
+;^b::
+
+$#l::
+	WinGetActiveTitle T
+	Send #l
+	Sleep 1000
+	
 	KeyWait Control  ; Wait for the key to be released.  Use one KeyWait for each of the hotkey's modifiers.
 	KeyWait Alt
 	BlockInput On
@@ -26,38 +38,54 @@
 	SendMessage 0x112, 0xF170, 2, , Program Manager
 	; (2 = off, 1 = standby, -1 = on)
 
+
 return
 
-0::
-	;MsgBox, lower.
-	run powercfg -Change -monitor-timeout-ac 180 , , Hide
-	Sleep 1000
+
+Control & 0::
+	run powercfg -Change -monitor-timeout-ac 0 , , Hide
+	Sleep 100
 	MoveBrightness(-40)
-	
 return
 
-;Volume_Up::
-	;MsgBox, lower.
-;	MoveBrightness(5)
-;return
+Control & 9::
+	run powercfg -Change -monitor-timeout-ac 0 , , Hide
+	Sleep 100
+	MoveBrightness(25)
+return
+Control & 8::
+	run powercfg -Change -monitor-timeout-ac 0 , , Hide
+	Sleep 100
+	MoveBrightness(80)
+return
 
 
-;Volume_Down::
-	;MsgBox, higer.
-;	MoveBrightness(-5)
-;return
 
-
+LWin & Volume_Up::
 Alt & Backspace::
 	;MsgBox, lower.
 	MoveBrightness(5)
 return
 
 
+LWin & Volume_Down::
 Alt & \::
 	;MsgBox, higer.
 	MoveBrightness(-5)
 return
+
+
+LWin & Volume_Mute::
+	;MsgBox, Volume_Mute.
+	MoveBrightness(80)
+	SoundSet, 0 
+
+return
+
+ 
+
+
+
 
 
 
