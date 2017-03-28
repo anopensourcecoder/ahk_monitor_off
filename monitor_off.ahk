@@ -1,6 +1,6 @@
 #SingleInstance force
 
-
+;test
 
 ;^b::
 
